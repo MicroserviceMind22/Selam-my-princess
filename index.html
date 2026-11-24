@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selam My Princess</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="film-shell">
+    <header class="masthead">
+      <div class="brand">PRINCESS FILMS <span>/ P-01</span></div>
+      <h1>Selam My Princess</h1>
+      <p>ሰላም · a Delicate flower</p>
+    </header>
+
+    <section class="player" aria-label="Animated film">
+      <canvas id="film" width="1920" height="1080"></canvas>
+      <button id="start" class="start-button" type="button">
+        <span>PLAY</span>
+        <small>ተጀምር</small>
+      </button>
+
+      <div class="controls" aria-label="Film controls">
+        <button id="playPause" class="control-icon" type="button" aria-label="Play">▶</button>
+        <input id="timeline" type="range" min="0" max="80" step="0.01" value="0" aria-label="Position in the film">
+        <time id="time">0:00 / 1:20</time>
+        <button id="mute" class="control-icon" type="button" aria-label="Mute music">♪</button>
+        <button id="fullscreen" class="control-icon" type="button" aria-label="Fullscreen">⛶</button>
+      </div>
+    </section>
+
+    <section class="music-picker" aria-label="Film soundtrack">
+      <label class="file-button" for="music-file">Choose a different song</label>
+      <input id="music-file" type="file" accept="audio/*">
+      <p id="music-status" role="status">The soundtrack is ready. Click Play to start the movie and music, or choose a different song from your PC.</p>
+      <audio id="soundtrack" src="audio/soundtrack.mp3" preload="metadata"></audio>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
